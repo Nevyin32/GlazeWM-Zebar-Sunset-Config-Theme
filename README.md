@@ -1,0 +1,1 @@
+# GlazeWM-Zebar-Sunset-Config-Theme
