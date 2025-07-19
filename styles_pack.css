@@ -1,0 +1,270 @@
+/**
+ * Import the Nerdfonts icon font.
+ * Ref https://www.nerdfonts.com/cheat-sheet for a cheatsheet of available Nerdfonts icons.
+ */
+@import 'https://www.nerdfonts.com/assets/css/webfont.css';
+:root {
+  --background-color:#242238;
+  --boxShadow-color: #f17876ad;
+  --textShadow-color:#f1787688; 
+  --border-color: #f1787688;
+  --textColor: #f17876;
+  --hover-color: #88303c;
+}
+
+
+i {
+  color: var(--textColor);
+  margin-right: 7px;
+  text-shadow: 0 0 10px var(--textColor);
+}
+
+body {
+  color: rgb(255 255 255 / 100%);
+  font-family: ui-monospace, monospace;
+  font-size: 12px;
+  overflow: hidden;
+}
+
+div,
+span,
+p {
+  cursor: default;
+  user-select: none;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+#root {
+  /* background-color: rgba(0, 0, 0, 0.3); */
+  /* background-color: var(--background-color); */
+  backdrop-filter: blur(16px);
+  /* box-shadow: 0 0 20px rgb(0 255 255 / 20%); */
+}
+
+.app {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: center;
+  height: 100%;
+  padding: 4px 0.3vw;
+}
+
+.left,
+.center,
+.right {
+  display: flex;
+  align-items: center;
+}
+
+.center {
+  justify-self: center;
+  background: var(--background-color);
+  padding: 6px 12px;
+  border-radius: 4px;
+  box-shadow: 0 0 5px var(--boxShadow-color);
+  margin-top: 3px;
+  font-weight: 500;
+  letter-spacing: 0.3px;
+  color: rgb(255 255 255 / 100%);
+  text-shadow: 0 0 10px var(--textShadow-color);
+  border: 1px solid var(--border-color);
+}
+
+.center .date {
+  font-weight: 600;
+  color: rgb(255 255 255 / 100%);
+}
+
+.center .separator {
+  margin: 0 8px;
+  color: var(--boxShadow-color);
+  font-weight: bold;
+}
+
+.center .process {
+  font-weight: 400;
+  color: var(--textColor);
+  text-transform: capitalize;
+  font-size: 0.95em;
+}
+
+.right {
+  justify-self: end;
+}
+
+.logo,
+.binding-mode,
+.tiling-direction,
+.paused-button,
+.network,
+.memory,
+.cpu,
+.battery,
+.weather,
+.audio,
+.disk {
+  margin-right: 12px;
+}
+
+.logo{
+  margin-left:12px;
+}
+
+.workspaces {
+  display: flex;
+  align-items: center;
+}
+
+.workspace {
+  background: var(--background-color);
+  margin-right: 4px;
+  padding: 4px 8px;
+  color: rgb(255 255 255 / 100%);
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.01s ease;
+  box-shadow: 0 0 5px var(--boxShadow-color);
+
+  &.displayed {
+    background: var(--background-color);
+    box-shadow: 0 0 10px var(--boxShadow-color);
+  }
+
+  &.focused,
+  &:hover {
+    background: var(--hover-color);
+    transform: translateY(-1px);
+    text-shadow: 0 0 10px var(--textShadow-color);
+    box-shadow: 0 0 13px var(--boxShadow-color);
+    border: 1px solid var(--border-color);
+  }
+}
+
+.binding-mode,
+.tiling-direction,
+.paused-button {
+  background: var(--background-color);
+  color: rgb(255 255 255 / 100%);
+  border-radius: 4px;
+  line-height: 1;
+  padding: 4px 8px;
+  border: 1px solid var(--border-color);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 0 5px var(--boxShadow-color);
+
+  &:hover {
+    background: var(--hover-color);
+    transform: translateY(-1px);
+    text-shadow: 0 0 10px var(--textShadow-color);
+    box-shadow: 0 0 10px var(--boxShadow-color);
+    border: 1px solid var(--border-color);
+  }
+}
+
+.binding-mode {
+  margin-right: 4px;
+}
+
+.cpu .high-usage {
+  color: rgb(0 255 255 / 100%);
+  text-shadow: 0 0 10px rgb(0 255 255 / 80%);
+}
+
+.battery {
+  position: relative;
+}
+
+.network,
+.memory,
+.cpu,
+.battery,
+.weather,
+.audio,
+.disk {
+  background: transparent;
+  padding: 0;
+  border-radius: 0;
+  box-shadow: none;
+  color: rgb(255 255 255 / 100%);
+
+  &:hover {
+    background: transparent;
+  }
+}
+
+.status-box {
+  display: flex;
+  align-items: center;
+  background: var(--background-color);
+  padding: 4px 12px;
+  margin-top: 1px;
+  border-radius: 4px;
+  box-shadow: 0 0 5px var(--boxShadow-color);
+  border: 1px solid var(--border-color);
+}
+
+.network {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.network .traffic {
+  display: flex;
+  gap: 4px;
+  font-size: 0.85em;
+  margin-left: 4px;
+  text-shadow: 0 0 10px var(--textColor);
+}
+
+.network .download {
+  color: var(--textColor);
+}
+
+.network .upload {
+  color: var(--textColor);
+}
+
+.audio .muted {
+  color: rgb(255 0 0 / 100%);
+  text-shadow: 0 0 10px rgb(255 0 0 / 80%);
+}
+
+.charging {
+  animation: pulse-charging 2s ease-in-out infinite;
+}
+
+.nf-md-power_plug.charging {
+  font-size: 0.6em;
+  margin-right: 2px;
+  position: relative;
+  top: -1px;
+}
+
+.low-battery {
+  color: rgb(255 0 0 / 100%) !important;
+  text-shadow: 0 0 10px rgb(255 0 0 / 80%) !important;
+}
+
+.full-battery {
+  color: rgb(0 255 0 / 100%) !important;
+  text-shadow: 0 0 10px rgb(0 255 0 / 80%) !important;
+}
+
+@keyframes pulse-charging {
+  0%, 100% {
+    color: rgb(0 255 0 / 100%);
+    text-shadow: 0 0 10px rgb(0 255 0 / 80%);
+  }
+  50% {
+    color: rgb(0 255 0 / 60%);
+    text-shadow: 0 0 15px rgb(0 255 0 / 90%);
+  }
+}
