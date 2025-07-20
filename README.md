@@ -38,7 +38,7 @@ or you could download as a zip file, by clicking [here](https://github.com/Nevyi
 
 * __Rainmeter__
 
-  * [Rainmeter Tool](https://windhawk.net/)
+  * [Rainmeter Tool](https://www.rainmeter.net/)
   * [Mond Skin](https://visualskins.com/media/p/565/mond.rmskin)
 
 ## Setup
